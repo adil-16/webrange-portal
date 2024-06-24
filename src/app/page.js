@@ -12,7 +12,7 @@ export default function Home() {
 
 
   useEffect(() => {
-    fetch('http://localhost:4000/api/projects/getTotalWorkItem')
+    fetch('https://azure-project-2ek8.onrender.com/api/projects/getTotalWorkItem')
       .then((res) => res.json())
       .then((data) => {
         setData(data.data)

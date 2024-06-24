@@ -8,7 +8,7 @@ const Page = ({ params }) => {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/projects/getWorkItemHistory", {
+    fetch("https://azure-project-2ek8.onrender.com/api/projects/getWorkItemHistory", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
