@@ -26,7 +26,7 @@ const Page = () => {
       <div className="w-full flex gap-y-2 flex-col mt-4 bg-gray-300 rounded-xl overflow-hidden">
         {data.map((item) => {
           return (
-            <IssueRow name={item.name} link={`/projects/${item.name}/issues`} />
+            <IssueRow key={item.name} name={item.name} link={`/projects/${item.name}/issues`} />
           );
         })}
         {/* <IssueRow name={"asdasa"} link={"/projects/123456/issues"} /> */}
