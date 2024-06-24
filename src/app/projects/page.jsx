@@ -3,7 +3,7 @@
 import IssueRow from "@/components/IssueRow";
 import React, { useEffect, useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
 
@@ -35,4 +35,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

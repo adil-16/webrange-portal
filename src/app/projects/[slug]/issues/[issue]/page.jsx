@@ -2,7 +2,7 @@
 import Card from "@/components/Card";
 import React, {useEffect, useState} from "react";
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
 
   const [data, setData] = useState({});
   const [isLoading, setLoading] = useState(true);
@@ -23,7 +23,7 @@ const page = ({ params }) => {
         setData(data.data);
         setLoading(false);
       });
-  }, []);
+  }, [params.slug, params.issue]);
 
   const sectotime = (sec) => {
     var hours = Math.floor(sec / 3600);
@@ -48,4 +48,4 @@ const page = ({ params }) => {
     </main>
   );
 };
-export default page;
+export default Page;

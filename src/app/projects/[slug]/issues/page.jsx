@@ -4,7 +4,7 @@ import IssueRow from "@/components/IssueRow";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
-const page = ({params}) => {
+const Page = ({ params }) => {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
 
@@ -26,7 +26,7 @@ const page = ({params}) => {
 
         setLoading(false);
       });
-  }, []);
+  }, [params?.slug]);
 
   if (isLoading) return <p>Loading...</p>;
 
@@ -38,6 +38,7 @@ const page = ({params}) => {
         {data.map((item) => {
           return (
             <IssueRow
+              key={item?.id}
               name={item?.fields["System.Title"]}
               link={`/projects/${params?.slug}/issues/${item?.id}`}
             />
@@ -48,4 +49,4 @@ const page = ({params}) => {
   );
 };
 
-export default page;
+export default Page;
