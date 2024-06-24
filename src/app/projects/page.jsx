@@ -8,7 +8,7 @@ const Page = () => {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://azure-project-2ek8.onrender.com/api/projects/getAllProjects")
+    fetch("https://azure-team-project.onrender.com/api/projects/getAllProjects")
       .then((res) => res.json())
       .then((data) => {
         setData(data.value);

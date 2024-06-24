@@ -11,7 +11,7 @@ const Page = ({ params }) => {
   console.log(params.slug);
 
   useEffect(() => {
-    fetch("https://azure-project-2ek8.onrender.com/api/projects/getProjectWorkItems", {
+    fetch("https://azure-team-project.onrender.com/api/projects/getProjectWorkItems", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

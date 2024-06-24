@@ -12,11 +12,11 @@ export default function Home() {
 
 
   useEffect(() => {
-    fetch('https://azure-project-2ek8.onrender.com/api/projects/getTotalWorkItem')
+    fetch('https://azure-team-project.onrender.com/api/projects/getTotalWorkItem')
       .then((res) => res.json())
       .then((data) => {
-        setData(data.data)
-
+        setData(data)
+        console.log("data", data)
         setLoading(false)
       })
   }, []);
